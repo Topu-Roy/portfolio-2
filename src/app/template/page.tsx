@@ -6,7 +6,7 @@ type Props = {}
 
 const TemplatePage = (props: Props) => {
     return (
-        <section className='w-full max-w-7xl mx-auto space-y-8'>
+        <section className='w-full max-w-7xl mx-auto'>
             <div className='py-8'>
                 <Card>
                     <CardHeader><p className='font-semibold text-2xl'>Guide</p></CardHeader>
@@ -23,6 +23,8 @@ const TemplatePage = (props: Props) => {
                     <CardFooter></CardFooter>
                 </Card>
             </div>
+
+            <h1 className="font-bold text-3xl pt-8">Templates</h1>
             <ImageGrid />
         </section>
     )
