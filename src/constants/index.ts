@@ -55,3 +55,63 @@ export const images = [
   { id: 54, path: "/demo/54.jpg" },
   { id: 55, path: "/demo/55.jpg" },
 ];
+
+export const BenefitsArray = [
+  {
+    id: 1,
+    image: "/benefit/fast.png",
+    headline: "Faster Initial Load",
+    description:
+      "Rendering components on the server side results in better SEO and faster initial page loads because the HTML is pre-generated and sent to the client.",
+  },
+  {
+    id: 2,
+    image: "/benefit/smaller.png",
+    headline: "Smaller Initial Bundle Sizes",
+    description:
+      "Automatic code splitting optimizes performance by loading only necessary JavaScript code, reducing initial load times.",
+  },
+  {
+    id: 3,
+    image: "/benefit/route.png",
+    headline: "Effortless Page Routing",
+    description:
+      "A built-in routing system simplifies dynamic client-side navigation without the need for external routing libraries.",
+  },
+  {
+    id: 4,
+    image: "/benefit/server.png",
+    headline: "Seamless Backend Integration",
+    description:
+      "Serverless API routes can be defined within your app, enabling effortless integration with backend services and APIs.",
+  },
+  {
+    id: 5,
+    image: "/benefit/structure.png",
+    headline: "Intuitive Project Structure",
+    description:
+      "Utilizing a file-based routing approach, where each page corresponds to a file, makes project structure and navigation intuitive.",
+  },
+  {
+    id: 6,
+    image: "/benefit/lightning.png",
+    headline: "Lightning-Fast Pre-rendered Pages",
+    description:
+      "Support for static site generation allows for pre-rendering static pages at build time, resulting in fast page loads and reduced server load.",
+  },
+
+  {
+    id: 7,
+    image: "/benefit/seo.png",
+    headline: "Improved SEO",
+    description:
+      "Rendering components on the server side results in better SEO because the HTML is pre-generated and sent to the client.",
+  },
+  {
+    id: 8,
+    image: "/benefit/render.png",
+    headline: "Hybrid Rendering",
+    description:
+      "Mix server-side rendering and static site generation in a single app, choosing the best approach for each page.",
+  },
+];

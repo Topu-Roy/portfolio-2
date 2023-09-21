@@ -24,7 +24,7 @@ const TemplatePage = (props: Props) => {
                 </Card>
             </div>
 
-            <h1 className="font-bold text-3xl pt-8">Templates</h1>
+            <h2 className="font-bold text-3xl pt-8">Templates</h2>
             <ImageGrid />
         </section>
     )
