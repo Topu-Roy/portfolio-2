@@ -54,7 +54,6 @@ const ImageGrid = () => {
                             <Link href={'#to_top'}>
                                 <Button
                                     key={btn}
-                                    className='px-5 py-3 bg-white text-black rounded-md hover:bg-white/90'
                                     onClick={() => setCurrentPage(btn)}
                                 >
                                     {btn}

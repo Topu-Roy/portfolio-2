@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import HireButton from "./HireButton";
+import { ModeToggle } from "./ThemeToggle";
 
 type Props = {};
 
@@ -10,7 +11,7 @@ function NavBar({ }: Props) {
       <nav className="max-w-7xl mx-auto flex justify-between items-center">
         <li className="flex justify-center items-center gap-4">
           <Link className="font-black text-2xl uppercase" href={'/'}>TOPU</Link>
-          <Link href={'/'}>Dark</Link>
+          <ModeToggle />
         </li>
         <li className="flex justify-center items-center gap-8">
           <Link href={'/'}>Home</Link>

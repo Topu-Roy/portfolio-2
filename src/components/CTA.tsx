@@ -8,7 +8,7 @@ type Props = {}
 const CTA = (props: Props) => {
     return (
         <div className="flex w-full mx-auto justify-center items-center gap-4 pb-8">
-            <Button><a target='_blank' href="https://github.com/Topu-Roy/">Github</a></Button>
+            <Button variant={'outline'}><a target='_blank' href="https://github.com/Topu-Roy/">Github</a></Button>
             <Button>
                 <Link href={'/template'}>Template</Link>
             </Button>
