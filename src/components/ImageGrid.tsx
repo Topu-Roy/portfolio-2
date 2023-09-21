@@ -1,7 +1,10 @@
 'use client'
 import { images } from '@/constants';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import { Button } from './ui/button';
+
 
 type ImageArrayType = { id: number; path: string; }[]
 
@@ -32,27 +35,35 @@ const ImageGrid = () => {
 
     return (
         <>
-            <div className="h-full w-full columns-3">
-                {displayImages ? displayImages.map(image => (
-                    <div id={`${image.id}`} className='p-2'>
-                        <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3' />
-                    </div>
-                ))
-                    : <div>Loading</div>}
-            </div>
+            <div className="h-full w-full mx-auto">
 
-            <div className="flex justify-center items-center gap-2 py-8 w-full mx-auto">
-                {displayPaginationButtons.map(btn => {
-                    return (
-                        <button
-                            key={btn}
-                            className='px-5 py-3 bg-white text-black rounded-md hover:bg-white/90'
-                            onClick={() => setCurrentPage(btn)}
-                        >
-                            {btn}
+                <div className="h-full w-full columns-3">
+                    {displayImages ? displayImages.map(image => (
+                        <button id={`${image.id}`} className='p-2'>
+                            <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3' />
                         </button>
-                    )
-                })}
+                    ))
+                        : <div>Loading</div>}
+                </div>
+
+
+                <div className="flex justify-center items-center gap-2 py-8 w-full mx-auto">
+                    {displayPaginationButtons.map(btn => {
+                        return (
+                            // * Wrap with Link so it scrolls to top when clicked
+                            <Link href={'#to_top'}>
+                                <Button
+                                    key={btn}
+                                    className='px-5 py-3 bg-white text-black rounded-md hover:bg-white/90'
+                                    onClick={() => setCurrentPage(btn)}
+                                >
+                                    {btn}
+                                </Button>
+                            </Link>
+                        )
+                    })}
+                </div>
+
             </div>
         </>
     )
