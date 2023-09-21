@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import HireButton from "./HireButton";
 import { ModeToggle } from "./ThemeToggle";
+import HireNowButton from "./HireNowButton";
 
 type Props = {};
 
@@ -18,7 +18,7 @@ function NavBar({ }: Props) {
           <Link href={'/'}>Contact</Link>
           <Link href={'/template'}>Template</Link>
           <Link href={'/'}>About</Link>
-          <HireButton />
+          <HireNowButton />
         </li>
       </nav>
     </header>

@@ -40,7 +40,7 @@ const ImageGrid = () => {
                 <div className="h-full w-full columns-3">
                     {displayImages ? displayImages.map(image => (
                         <button id={`${image.id}`} className='p-2'>
-                            <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3' />
+                            <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3 shadow-md' />
                         </button>
                     ))
                         : <div>Loading</div>}

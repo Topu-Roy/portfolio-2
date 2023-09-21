@@ -1,5 +1,5 @@
-
 import React from 'react'
+import HireNowButton from './HireNowButton'
 
 type Props = {}
 
@@ -9,10 +9,11 @@ const Footer = (props: Props) => {
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <a href="/" className="flex flex-col justify-start items-start">
+                        <a href="/" className="flex flex-col justify-start items-start mb-8">
                             <span className="self-start text-2xl  whitespace-nowrap dark:text-white font-bold">TOPU ROY</span>
                             <span className="self-start text-sm whitespace-nowrap dark:text-white">Full Stack Web Developer</span>
                         </a>
+                        <HireNowButton />
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
