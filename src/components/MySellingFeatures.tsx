@@ -31,7 +31,7 @@ const MySellingFeatures = () => {
                     </Card>
                 ))}
 
-                <div className={`${displayCount === 6 ? '-mt-[14rem] bg-gradient-to-t from-[#0A0A0A] to-transparent items-end h-[12rem]' : ''} flex w-[71rem] py-8 max-w-[71rem] justify-center`}>
+                <div className={`${displayCount === 6 ? '-mt-[14rem] bg-gradient-to-t from-white dark:from-[#0A0A0A] to-transparent items-end h-[12rem]' : ''} flex w-[71rem] py-8 max-w-[71rem] justify-center`}>
                     <Button onClick={() => setDisplayCount(prev => prev === 6 ? clientBenefits.length : 6)} className="hover:underline">
                         {displayCount === 6 ? 'Show More' : 'Show Less'}
                     </Button>
