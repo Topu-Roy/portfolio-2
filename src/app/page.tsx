@@ -1,6 +1,7 @@
 import CTA from "@/components/CTA";
 import Features from "@/components/Features";
 import HeroImageCard from "@/components/HeroImageCard";
+import MySellingFeatures from "@/components/MySellingFeatures";
 
 export default function Home() {
   return (
@@ -23,6 +24,12 @@ export default function Home() {
       <section className="py-16 border-t-2 border-b-2">
         <Features />
       </section>
+
+      {/* MySellingFeatures section */}
+      <section className="py-16 border-b-2">
+        <MySellingFeatures />
+      </section>
+
     </main>
   )
 }

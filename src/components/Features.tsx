@@ -6,7 +6,7 @@ import { BenefitsArray } from '@/constants';
 const Features = () => {
     return (
         <>
-            <h1 className="font-bold text-3xl pl-[4.5rem] pb-8 hover:underline">Benefits of choosing Next.JS</h1>
+            <h3 className="font-bold w-full text-center text-4xl pl-[4.5rem] py-8 hover:underline">Benefits of choosing Next.JS</h3>
 
             <div className="flex justify-center gap-4 items-center flex-wrap">
                 {BenefitsArray.map(item => (
