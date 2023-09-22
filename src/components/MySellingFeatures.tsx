@@ -7,7 +7,7 @@ import { Button } from './ui/button'
 
 const MySellingFeatures = () => {
 
-    const [displayCount, setDisplayCount] = useState(6);
+    const [displayCount, setDisplayCount] = useState(8);
 
     return (
         <div className='w-full relative'>
@@ -31,9 +31,9 @@ const MySellingFeatures = () => {
                     </Card>
                 ))}
 
-                <div className={`${displayCount === 6 ? '-mt-[14rem] bg-gradient-to-t from-white dark:from-[#0A0A0A] to-transparent items-end h-[12rem]' : ''} flex w-[71rem] py-8 max-w-[71rem] justify-center`}>
-                    <Button onClick={() => setDisplayCount(prev => prev === 6 ? clientBenefits.length : 6)} className="hover:underline">
-                        {displayCount === 6 ? 'Show More' : 'Show Less'}
+                <div className={`${displayCount === 8 ? '-mt-[14rem] bg-gradient-to-t from-white dark:from-[#0A0A0A] to-transparent items-end h-[12rem]' : ''} flex w-[71rem] py-8 max-w-[71rem] justify-center`}>
+                    <Button onClick={() => setDisplayCount(prev => prev === 8 ? clientBenefits.length : 8)} className="hover:underline">
+                        {displayCount === 8 ? 'Show More' : 'Show Less'}
                     </Button>
                 </div>
 
