@@ -19,7 +19,7 @@ const MySellingFeatures = () => {
                         <CardHeader>
                             <div className='flex justify-start gap-3 items-center'>
                                 <div className="h-8 w-8 ring-1 dark:ring-0 ring-black bg-white rounded-full flex justify-center items-center">
-                                    {/* <Image src={item.image} alt='' height={20} width={20} /> */}
+                                    <Image src={item.image} alt='' height={20} width={20} />
                                 </div>
                                 <h3 className='font-medium text-lg'>{item.headline}</h3>
                             </div>

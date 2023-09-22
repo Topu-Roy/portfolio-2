@@ -120,60 +120,70 @@ export const clientBenefits = [
   {
     id: 1,
     headline: "Tailored Solutions",
+    image: "/why-me/solution.png",
     description:
       "I will provide customized solutions tailored to each client's unique needs and goals, ensuring a personalized experience.",
   },
   {
     id: 2,
     headline: "Expert Consultation",
+    image: "/why-me/consultation.png",
     description:
       "Clients will receive expert consultation and guidance to make informed decisions and achieve their objectives.",
   },
   {
     id: 3,
     headline: "Timely Deliverables",
+    image: "/why-me/delivery.png",
     description:
       "I am committed to delivering projects and services on time, meeting deadlines consistently.",
   },
   {
     id: 4,
     headline: "Clear Communication",
+    image: "/why-me/communication.png",
     description:
       "Maintaining open and transparent communication channels, I will keep clients informed at every stage of the project.",
   },
   {
     id: 5,
     headline: "Quality Assurance",
+    image: "/why-me/quality.png",
     description:
       "Ensuring the highest quality in deliverables, I will perform rigorous quality checks to meet or exceed expectations.",
   },
   {
     id: 6,
     headline: "Cost-Efficiency",
+    image: "/why-me/cost.png",
     description:
       "Clients can expect cost-effective solutions that maximize value without compromising on quality.",
   },
   {
     id: 7,
     headline: "Continuous Improvement",
+    image: "/why-me/improvement.png",
     description:
       "I am dedicated to continuous improvement and will adapt to evolving needs and technologies to benefit clients.",
   },
   {
     id: 8,
     headline: "Client-Centered Approach",
+    image: "/why-me/client.png",
     description:
       "My services are designed with the client in mind, focusing on their success and satisfaction.",
   },
   {
     id: 9,
     headline: "Flexible Collaboration",
+    image: "/why-me/collaboration.png",
     description:
       "Clients have the flexibility to choose collaboration models that suit their preferences and requirements.",
   },
   {
     id: 10,
     headline: "Post-Project Support",
+    image: "/why-me/support.png",
     description:
       "After project completion, clients will receive ongoing support and assistance as needed for a smooth transition and sustained success.",
   },
