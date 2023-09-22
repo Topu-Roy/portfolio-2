@@ -12,7 +12,7 @@ const HeroImageCard = (props: Props) => {
             <CardContent className='pt-6'>
                 <div className="flex justify-center items-center gap-4">
                     <div>
-                        <Image className="rounded-xl grayscale-[70%] hover:grayscale-0 transition-all duration-200" src={'/Topu Roy.jpg'} alt='' height={400} width={400} />
+                        <Image className="rounded-xl dark:grayscale-[70%] dark:hover:grayscale-0 transition-all duration-200" src={'/Topu Roy.jpg'} alt='' height={400} width={400} />
                     </div>
                     <div className="flex flex-1 justify-center items-center gap-4 flex-col">
                         <Card className='w-full pt-6'>
@@ -20,7 +20,7 @@ const HeroImageCard = (props: Props) => {
                                 <div className="flex justify-start items-center gap-4">
                                     <div className="relative w-10">
                                         <Avatar>
-                                            <AvatarImage src={'/Topu Roy.jpg'} alt="@topu_web_dev" />
+                                            <AvatarImage src={'/Topu Roy.jpg'} alt="@topu_web_dev" className='dark:grayscale-[70%] dark:hover:grayscale-0 transition-all duration-200' />
                                             <AvatarFallback>TR</AvatarFallback>
                                         </Avatar>
                                         <div className='absolute h-3 w-3 rounded-full bg-green-500 -bottom-1 right-0' />
