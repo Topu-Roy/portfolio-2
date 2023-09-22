@@ -20,7 +20,7 @@ const HeroImageCard = (props: Props) => {
                                 <div className="flex justify-start items-center gap-4">
                                     <div className="relative w-10">
                                         <Avatar>
-                                            <AvatarImage src={'/Topu Roy.jpg'} alt="@topu_web_dev" />
+                                            <AvatarImage src={'/Topu Roy.jpg'} alt="@topu_web_dev" className='dark:grayscale-[70%] dark:hover:grayscale-0 transition-all duration-200' />
                                             <AvatarFallback>TR</AvatarFallback>
                                         </Avatar>
                                         <div className='absolute h-3 w-3 rounded-full bg-green-500 -bottom-1 right-0' />
