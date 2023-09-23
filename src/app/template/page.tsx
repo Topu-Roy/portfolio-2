@@ -6,11 +6,11 @@ type Props = {}
 
 const TemplatePage = (props: Props) => {
     return (
-        <section className='w-full max-w-7xl mx-auto'>
+        <section className='w-full max-w-7xl mx-auto border-b-2 pb-8'>
             <div className='py-8'>
                 <Card>
-                    <CardHeader><p className='font-semibold text-2xl'>Guide</p></CardHeader>
-                    <CardContent>
+                    <CardHeader><p className='font-semibold text-3xl'>Guide</p></CardHeader>
+                    <CardContent className='text-lg'>
                         <p>
                             Press on any template to see the details about the template. There is a lot of great options so pick your favorite ones.
                         </p>

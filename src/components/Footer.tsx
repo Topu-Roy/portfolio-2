@@ -45,29 +45,33 @@ const Footer = (props: Props) => {
                     {/* Gigs */}
                     <div className="flex-1 rounded-md flex justify-center items-center border-[1.5px] border-black/20 dark:border-white/20 p-4 gap-4">
 
-                        <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
-                            <Image src={'/demo/13.jpg'} alt='' height={200} width={200} className='w-full rounded-md shadow' />
-                            <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
-                                <p className='font-bold py-2'>I will build professional web applications using Next and Tailwind CSS</p>
+                        <a href="https://www.fiverr.com/topu_web_dev" target="_blank">
+                            <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
+                                <Image src={'/demo/13.jpg'} alt='' height={200} width={200} className='w-full rounded-md shadow' />
+                                <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
+                                    <p className='font-bold py-2'>I will build professional web applications using Next and Tailwind CSS</p>
 
-                                <div className="flex w-full justify-between items-center font-semibold">
-                                    5 Star (50)
-                                    <p>Starting at <span className="text-2xl font-bold">$20</span></p>
+                                    <div className="flex w-full justify-between items-center font-semibold">
+                                        5 Star (50)
+                                        <p>Starting at <span className="text-2xl font-bold">$20</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
-                            <Image src={'/demo/14.jpg'} alt='' height={200} width={200} className='w-full rounded-md shadow' />
-                            <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
-                                <p className='font-bold py-2'>I will build professional web applications using Next and Tailwind CSS</p>
+                        <a href="https://www.fiverr.com/topu_web_dev" target="_blank">
+                            <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
+                                <Image src={'/demo/14.jpg'} alt='' height={200} width={200} className='w-full rounded-md shadow' />
+                                <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
+                                    <p className='font-bold py-2'>I will build professional web applications using Next and Tailwind CSS</p>
 
-                                <div className="flex w-full justify-between items-center font-semibold">
-                                    5 Star (50)
-                                    <p>Starting at <span className="text-2xl font-bold">$20</span></p>
+                                    <div className="flex w-full justify-between items-center font-semibold">
+                                        5 Star (50)
+                                        <p>Starting at <span className="text-2xl font-bold">$20</span></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                     </div>
                 </div>

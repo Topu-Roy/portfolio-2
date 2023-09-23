@@ -15,9 +15,7 @@ function NavBar({ }: Props) {
         </li>
         <li className="flex justify-center items-center gap-8">
           <Link href={'/'}>Home</Link>
-          <Link href={'/'}>Contact</Link>
           <Link href={'/template'}>Template</Link>
-          <Link href={'/'}>About</Link>
           <HireNowButton />
         </li>
       </nav>
