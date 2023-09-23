@@ -11,8 +11,8 @@ const HeroImageCard = (props: Props) => {
         <Card className='max-w-5xl'>
             <CardContent className='pt-6'>
                 <div className="flex justify-center items-center gap-4">
-                    <div>
-                        <Image className="rounded-xl dark:grayscale-[70%] dark:hover:grayscale-0 transition-all duration-200" src={'/Topu Roy.jpg'} alt='' height={400} width={400} />
+                    <div className='overflow-hidden rounded-xl'>
+                        <Image className="rounded-xl hover:scale-110 transition-all duration-300" src={'/Topu Roy.jpg'} alt='' height={400} width={400} />
                     </div>
                     <div className="flex flex-1 justify-center items-center gap-4 flex-col">
                         <Card className='w-full pt-6'>
@@ -20,10 +20,10 @@ const HeroImageCard = (props: Props) => {
                                 <div className="flex justify-start items-center gap-4">
                                     <div className="relative w-10">
                                         <Avatar>
-                                            <AvatarImage src={'/Topu Roy.jpg'} alt="@topu_web_dev" className='dark:grayscale-[70%] dark:hover:grayscale-0 transition-all duration-200' />
+                                            <AvatarImage src={'/Topu Roy.jpg'} alt="@topu_web_dev" />
                                             <AvatarFallback>TR</AvatarFallback>
                                         </Avatar>
-                                        <div className='absolute h-3 w-3 rounded-full bg-green-500 dark:bg-slate-300 ring-1 dark:ring-green-600 -bottom-1 right-0' />
+                                        <div className='absolute h-3 w-3 rounded-full bg-green-500 -bottom-1 right-0' />
                                     </div>
                                     <div>
                                         <p className='font-semibold text-lg'>@topu_web_dev</p>
