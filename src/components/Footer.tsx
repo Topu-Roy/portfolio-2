@@ -13,7 +13,7 @@ const Footer = (props: Props) => {
 
                     {/* Profile */}
                     <div className="w-[40%]">
-                        <div className="flex flex-col justify-center items-center border-[1.5px] border-black/20 p-2 rounded-md max-w-md mx-auto py-4 px-6">
+                        <div className="flex flex-col justify-center items-center border-[1.5px] border-black/20 dark:border-white/20 p-2 rounded-md max-w-md mx-auto py-4 px-6">
                             {/* Image */}
                             <div className="flex justify-center items-center relative">
                                 <Image src={'/Topu Roy.jpg'} alt='Topu Roy' width={200} height={200} className='rounded-full' />
@@ -34,7 +34,7 @@ const Footer = (props: Props) => {
                             {/* Preview Profile */}
                             <div className="w-full pt-8">
                                 <a href="https://www.fiverr.com/topu_web_dev" target="_blank" rel="noopener noreferrer">
-                                    <button type="button" className='w-full py-2 border-[1.5px] border-black/20 dark:border-white text-center rounded-md'>
+                                    <button type="button" className='w-full py-2 border-[1.5px] border-black/20 dark:border-white/20 dark:border-white text-center rounded-md'>
                                         Preview Profile
                                     </button>
                                 </a>
@@ -43,9 +43,9 @@ const Footer = (props: Props) => {
                     </div>
 
                     {/* Gigs */}
-                    <div className="flex-1 rounded-md flex justify-center items-center border-[1.5px] border-black/20 p-4 gap-4">
+                    <div className="flex-1 rounded-md flex justify-center items-center border-[1.5px] border-black/20 dark:border-white/20 p-4 gap-4">
 
-                        <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 p-2">
+                        <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
                             <Image src={'/demo/13.jpg'} alt='' height={200} width={200} className='w-full rounded-md shadow' />
                             <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
                                 <p className='font-bold py-2'>I will build professional web applications using Next and Tailwind CSS</p>
@@ -57,7 +57,7 @@ const Footer = (props: Props) => {
                             </div>
                         </div>
 
-                        <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 p-2">
+                        <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
                             <Image src={'/demo/14.jpg'} alt='' height={200} width={200} className='w-full rounded-md shadow' />
                             <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
                                 <p className='font-bold py-2'>I will build professional web applications using Next and Tailwind CSS</p>
