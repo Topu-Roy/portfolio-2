@@ -23,7 +23,7 @@ const HeroImageCard = (props: Props) => {
                                             <AvatarImage src={'/Topu Roy.jpg'} alt="@topu_web_dev" className='dark:grayscale-[70%] dark:hover:grayscale-0 transition-all duration-200' />
                                             <AvatarFallback>TR</AvatarFallback>
                                         </Avatar>
-                                        <div className='absolute h-3 w-3 rounded-full bg-green-500 -bottom-1 right-0' />
+                                        <div className='absolute h-3 w-3 rounded-full bg-green-500 dark:bg-slate-300 ring-1 dark:ring-green-600 -bottom-1 right-0' />
                                     </div>
                                     <div>
                                         <p className='font-semibold text-lg'>@topu_web_dev</p>
