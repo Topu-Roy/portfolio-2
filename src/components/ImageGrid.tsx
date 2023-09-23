@@ -1,9 +1,12 @@
 'use client'
+
 import { images } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { Button } from './ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogTrigger } from './ui/dialog';
+import { Card, CardContent } from './ui/card';
 
 
 type ImageArrayType = { id: number; path: string; }[]
@@ -22,7 +25,6 @@ const ImageGrid = () => {
 
     // * Pagination Buttons
     const displayPaginationButtons: number[] = []
-
     for (let i = 1; i < totalPages; i++) {
         displayPaginationButtons.push(i)
     }
@@ -39,9 +41,30 @@ const ImageGrid = () => {
 
                 <div className="h-full w-full columns-3">
                     {displayImages ? displayImages.map(image => (
-                        <button id={`${image.id}`} className='p-2'>
-                            <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3 shadow-md' />
-                        </button>
+                        <div id={`${image.id}`}>
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <button>
+                                        <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3 shadow-md' />
+                                    </button>
+                                </DialogTrigger>
+                                <DialogContent className="max-w-xl">
+
+                                    <Card>
+                                        <CardContent>
+                                            <div className='space-y-4'>
+                                                <Image src={image.path} alt='image' height={1000} width={1000} className='rounded-lg mt-3 shadow-md' />
+                                                <p className='font-semibold text-lg'>Design id = <span className="font-bold text-3xl">{image.id}</span></p>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+
+                                    <DialogFooter>
+                                        <Button type="submit">Add Favorite</Button>
+                                    </DialogFooter>
+                                </DialogContent>
+                            </Dialog>
+                        </div>
                     ))
                         : <div>Loading</div>}
                 </div>
