@@ -12,19 +12,18 @@ function NavBar() {
 
   return (
     <header
-      className="px-3 sm:px-0 w-full mx-auto py-4 border-b-[2px] sticky top-0 backdrop-blur-3xl z-50"
+      className="sticky top-0 z-50 mx-auto w-full border-b-[2px] px-3 py-4 backdrop-blur-3xl sm:px-0"
       id="to_top"
     >
-      <nav className="relative max-w-7xl mx-auto flex justify-between items-center">
-        <li className="flex justify-center items-center gap-4">
-          <Link className="font-black text-2xl uppercase" href={"/"}>
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between">
+        <li className="flex items-center justify-center gap-4">
+          <Link className="text-2xl font-black uppercase" href={"/"}>
             TOPU
           </Link>
           <ModeToggle />
-
         </li>
 
-        <li className="hidden sm:flex justify-center items-center gap-8">
+        <li className="hidden items-center justify-center gap-8 sm:flex">
           <Link href={"/"}>Home</Link>
           <Link href={"/template"}>Template</Link>
           <HireNowButton />
@@ -38,22 +37,22 @@ function NavBar() {
 
         <div
           className={`${!isOpen ? "translate-x-[150%]" : ""
-            } flex flex-col absolute h-[100vh] w-[100vw] left-[-0.75rem] top-[-1rem] mx-auto justify-start pt-16 bg-white dark:bg-black z-50`}
+            } absolute left-[-0.75rem] top-[-1rem] z-50 mx-auto flex h-[100vh] w-[100vw] flex-col justify-start bg-white pt-16 dark:bg-black`}
         >
-          <div className="relative gap-8 flex flex-col items-center justify-center ">
+          <div className="relative flex flex-col items-center justify-center gap-8 ">
             <Button
-              className="absolute z-[999] bg-white dark:bg-black dark:text-white text-black  font-semibold top-[-20%] right-[10%]"
+              className="absolute right-[10%] top-[-20%] z-[999] bg-white font-semibold  text-black dark:bg-black dark:text-white"
               onClick={() => setIsOpen(false)}
               variant="outline"
             >
               Close
             </Button>
 
-            <h3 className="font-bold text-4xl">Go To</h3>
+            <h3 className="text-4xl font-bold">Go To</h3>
             <Button
               onClick={() => setIsOpen(false)}
               variant={"ghost"}
-              className="p-0 m-0"
+              className="m-0 p-0"
               type="submit"
             >
               <Link href={"/"}>Home </Link>
@@ -61,7 +60,7 @@ function NavBar() {
 
             <Link
               onClick={() => setIsOpen(false)}
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               href={"/template"}
             >
               Template
