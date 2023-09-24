@@ -41,7 +41,7 @@ const ImageGrid = () => {
 
                 <div className="h-full w-full columns-3">
                     {displayImages ? displayImages.map(image => (
-                        <div id={`${image.id}`}>
+                        <div key={`${image.id}`}>
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <button>

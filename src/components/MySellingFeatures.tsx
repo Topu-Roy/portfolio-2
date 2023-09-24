@@ -15,7 +15,7 @@ const MySellingFeatures = () => {
 
             <div className="flex justify-center gap-4 items-center flex-wrap">
                 {clientBenefits.slice(0, displayCount).map(item => (
-                    <Card className='w-[35rem] h-[12rem]' id={`${item.id}`}>
+                    <Card className='w-[35rem] h-[12rem]' key={`${item.id}`}>
                         <CardHeader>
                             <div className='flex justify-start gap-3 items-center'>
                                 <div className="h-8 w-8 ring-1 dark:ring-0 ring-black bg-white rounded-full flex justify-center items-center">
