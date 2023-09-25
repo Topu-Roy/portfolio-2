@@ -2,16 +2,14 @@ import React from "react";
 import HireNowButton from "./HireNowButton";
 import Image from "next/image";
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = () => {
     return (
         <>
             <div className="w-full mt-8">
-                <div className="h-full w-full max-w-7xl mx-auto mt-8 rounded-xl flex p-2 gap-2">
+                <div className="h-full w-full max-w-7xl mx-auto mt-8 rounded-xl flex flex-col md:flex-row p-2 gap-2">
                     {/* Profile */}
-                    <div className="w-[40%]">
-                        <div className="flex flex-col justify-center items-center border-[1.5px] border-black/20 dark:border-white/20 p-2 rounded-md max-w-md mx-auto py-4 px-6">
+                    <div className="w-full md:w-[40%]">
+                        <div className="flex flex-col justify-center items-center border-[1.5px] border-black/20 dark:border-white/20 p-2 rounded-md max-w-md lg:h-[27rem] mx-auto py-4 px-6">
                             {/* Image */}
                             <div className="flex justify-center items-center relative">
                                 <Image
@@ -21,8 +19,8 @@ const Footer = (props: Props) => {
                                     height={200}
                                     className="rounded-full"
                                 />
-                                <span className="absolute top-8 -right-24 px-2 rounded-full ring-[1px] text-green-300 ring-green-500 text-center">
-                                    <span className="text-2xl leading-3">.</span> Online
+                                <span className="absolute top-8 md:top-3 lg:top-8 -right-24 md:-right-11 lg:-right-24 px-2 md:px-1 lg:px-2 rounded-full ring-[1px] text-green-300 ring-green-500 text-center">
+                                    <span className="md:text-sm lg:text-2xl lg:leading-[0px]">.</span> Online
                                 </span>
                             </div>
 
@@ -56,58 +54,65 @@ const Footer = (props: Props) => {
                     </div>
 
                     {/* Gigs */}
-                    <div className="flex-1 rounded-md flex justify-center items-center border-[1.5px] border-black/20 dark:border-white/20 p-4 gap-4">
-                        <a href="https://www.fiverr.com/topu_web_dev" target="_blank">
-                            <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
-                                <Image
-                                    src={"/demo/13.jpg"}
-                                    alt=""
-                                    height={200}
-                                    width={200}
-                                    className="w-full rounded-md shadow"
-                                />
-                                <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
-                                    <p className="font-bold py-2">
+                    <div className="flex-1 w-full lg:h-[27rem] max-w-md sm:max-w-full sm:w-full lg:w-full mx-auto rounded-md flex flex-col sm:flex-row justify-center items-center border-[1.5px] border-black/20 dark:border-white/20 p-4 gap-4">
+
+                        <a className="flex-1 h-full w-full" href="https://www.fiverr.com/topu_web_dev" target="_blank">
+                            <div className="h-full flex flex-col justify-between items-center rounded-md border-[1.5px] text-black/70 dark:text-white/70 border-black/20 dark:border-white/20 p-2">
+                                <div className=" ">
+                                    <Image
+                                        src={"/demo/13.jpg"}
+                                        alt=""
+                                        height={200}
+                                        width={200}
+                                        className="w-full rounded-md shadow"
+                                    />
+
+                                    <p className="font-bold py-2 text-lg">
                                         I will build professional web applications using Next and
                                         Tailwind CSS
                                     </p>
-
-                                    <div className="flex w-full justify-between items-center font-semibold">
-                                        5 Star (50)
-                                        <p>
-                                            Starting at{" "}
-                                            <span className="text-2xl font-bold">$20</span>
-                                        </p>
-                                    </div>
                                 </div>
+
+                                <div className="flex md:flex-col lg:flex-row w-full justify-between items-center md:items-start lg:items-center  font-semibold">
+                                    <p>5 Star (50)</p>
+                                    <p>
+                                        Starting at
+                                        <span className="text-2xl font-bold">$20</span>
+                                    </p>
+                                </div>
+
                             </div>
                         </a>
 
-                        <a href="https://www.fiverr.com/topu_web_dev" target="_blank">
-                            <div className="flex-1 h-full rounded-md border-[1.5px] border-black/20 dark:border-white/20 p-2">
-                                <Image
-                                    src={"/demo/14.jpg"}
-                                    alt=""
-                                    height={200}
-                                    width={200}
-                                    className="w-full rounded-md shadow"
-                                />
-                                <div className="flex justify-between items-center flex-col text-black/70 dark:text-white/70">
-                                    <p className="font-bold py-2">
+
+                        <a className="flex-1 h-full w-full" href="https://www.fiverr.com/topu_web_dev" target="_blank">
+                            <div className="h-full flex flex-col justify-between items-center rounded-md border-[1.5px] text-black/70 dark:text-white/70 border-black/20 dark:border-white/20 p-2">
+                                <div className=" ">
+                                    <Image
+                                        src={"/demo/15.jpg"}
+                                        alt=""
+                                        height={200}
+                                        width={200}
+                                        className="w-full rounded-md shadow"
+                                    />
+
+                                    <p className="font-bold py-2 text-lg">
                                         I will build professional web applications using Next and
                                         Tailwind CSS
                                     </p>
-
-                                    <div className="flex w-full justify-between items-center font-semibold">
-                                        5 Star (50)
-                                        <p>
-                                            Starting at{" "}
-                                            <span className="text-2xl font-bold">$20</span>
-                                        </p>
-                                    </div>
                                 </div>
+
+                                <div className="flex md:flex-col lg:flex-row w-full justify-between items-center md:items-start lg:items-center  font-semibold">
+                                    <p>5 Star (50)</p>
+                                    <p>
+                                        Starting at
+                                        <span className="text-2xl font-bold">$20</span>
+                                    </p>
+                                </div>
+
                             </div>
                         </a>
+
                     </div>
                 </div>
             </div>
