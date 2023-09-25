@@ -11,7 +11,6 @@ const Features = () => {
             <div className="flex justify-center gap-4 items-center flex-wrap">
                 {BenefitsArray.map(item => (
                     <Card className='w-full md:w-[48%] xl:w-[35rem] h-[12rem] md:h-[15rem] lg:h-[12rem]' key={`${item.id}`}>
-                        {/* md:w-[23rem] lg:w-[30rem] xl:w-[35rem] */}
                         <CardHeader>
                             <div className='flex justify-start gap-3 items-center'>
                                 <div className="h-8 w-8 ring-1 dark:ring-0 ring-black bg-white rounded-full flex justify-center items-center">
