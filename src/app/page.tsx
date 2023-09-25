@@ -21,12 +21,12 @@ export default function Home() {
       </section>
 
       {/* Features section */}
-      <section className="sm:py-16 border-t-2 border-b-2 w-full px-3 md:px-0">
+      <section className="sm:py-16 pb-16 border-t-2 border-b-2 w-full px-3 md:px-0">
         <Features />
       </section>
 
       {/* MySellingFeatures section */}
-      <section className="py-16 border-b-2">
+      <section className="w-full pb-16 md:py-16 border-b-2 px-3 md:px-0">
         <MySellingFeatures />
       </section>
 

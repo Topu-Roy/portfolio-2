@@ -11,11 +11,11 @@ const MySellingFeatures = () => {
 
     return (
         <div className='w-full relative'>
-            <h3 className="font-bold w-full text-center text-4xl pl-[4.5rem] py-8 hover:underline">Why Choose Me?</h3>
+            <h3 className="font-bold w-full text-center text-4xl py-8 hover:underline">Why Choose Me?</h3>
 
             <div className="flex justify-center gap-4 items-center flex-wrap">
                 {clientBenefits.slice(0, displayCount).map(item => (
-                    <Card className='w-[35rem] h-[12rem]' key={`${item.id}`}>
+                    <Card className='w-full md:w-[48%] xl:w-[35rem] h-[12rem]' key={`${item.id}`}>
                         <CardHeader>
                             <div className='flex justify-start gap-3 items-center'>
                                 <div className="h-8 w-8 ring-1 dark:ring-0 ring-black bg-white rounded-full flex justify-center items-center">
