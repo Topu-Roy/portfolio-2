@@ -6,7 +6,7 @@ type Props = { onClick?: () => void }
 const HireNowButton = (props: Props) => {
     return (
         <Button {...props}>
-            <a href="https://www.fiverr.com/topu_web_dev?up_rollout=true" target='_blank'>Hire Me</a>
+            <a href="https://www.fiverr.com/topu_web_dev" target='_blank'>Hire Me</a>
         </Button>
     )
 }
