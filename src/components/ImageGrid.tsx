@@ -1,13 +1,16 @@
 'use client'
 
-import { images } from '@/constants';
-import Image from 'next/image';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link';
+import Image from 'next/image';
+
 import { Button } from './ui/button';
 import { Dialog, DialogContent, DialogFooter, DialogTrigger } from './ui/dialog';
 import { Card, CardContent } from './ui/card';
 import { Skeleton } from './ui/skeleton';
+
+import { images } from '@/constants';
+import { toast } from './ui/use-toast';
 
 
 type ImageArrayType = { id: number; path: string; }[]
@@ -36,6 +39,7 @@ const ImageGrid = () => {
     }, [])
 
 
+    // * Copy to clipboard
     const [isCopied, setIsCopied] = useState(false);
 
     async function copyTextToClipboard(text: string) {
@@ -49,7 +53,7 @@ const ImageGrid = () => {
     const handleCopyClick = (CopyText: string) => {
         copyTextToClipboard(CopyText)
             .then(() => {
-                setIsCopied(true);
+                setIsCopied(true)
                 setTimeout(() => {
                     setIsCopied(false);
                 }, 1500);
@@ -58,6 +62,15 @@ const ImageGrid = () => {
                 console.log(err);
             });
     }
+
+    useEffect(() => {
+        if (isCopied) {
+            toast({
+                title: "Copied to clipboard",
+                description: "The Design ID is copied to clipboard 🎉",
+            })
+        }
+    }, [isCopied])
 
 
     return (
