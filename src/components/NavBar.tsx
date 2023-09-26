@@ -38,8 +38,10 @@ function NavBar() {
 
         {/* Mobile slider */}
         <div
-          className={`${!isOpen ? "translate-x-[150%]" : ""
-            } absolute transition-transform duration-200 left-[-0.75rem] top-[-1rem] z-[100] mx-auto flex h-[100vh] w-[100vw] flex-col justify-start bg-white px-3 py-4 dark:bg-black`}
+
+          className={`${!isOpen ? "translate-x-[150%] opacity-0" : "flex opacity-100"} 
+            absolute transition-all duration-200 left-[-0.75rem] top-[-1rem] z-[100] mx-auto h-[100vh] w-[100vw] flex-col justify-start bg-white px-3 py-4 dark:bg-black`
+          }
         >
           <div className="w-full flex justify-end items-center">
             <Button

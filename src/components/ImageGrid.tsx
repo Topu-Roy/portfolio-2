@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react'
 import { Button } from './ui/button';
 import { Dialog, DialogContent, DialogFooter, DialogTrigger } from './ui/dialog';
 import { Card, CardContent } from './ui/card';
+import { Skeleton } from './ui/skeleton';
 
 
 type ImageArrayType = { id: number; path: string; }[]
@@ -35,38 +36,89 @@ const ImageGrid = () => {
     }, [])
 
 
+    const [isCopied, setIsCopied] = useState(false);
+
+    async function copyTextToClipboard(text: string) {
+        if ('clipboard' in navigator) {
+            return await navigator.clipboard.writeText(text);
+        } else {
+            return document.execCommand('copy', true, text);
+        }
+    }
+
+    const handleCopyClick = (CopyText: string) => {
+        copyTextToClipboard(CopyText)
+            .then(() => {
+                setIsCopied(true);
+                setTimeout(() => {
+                    setIsCopied(false);
+                }, 1500);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
+
+
     return (
         <>
             <div className="h-full w-full mx-auto">
 
-                <div className="h-full w-full columns-3">
-                    {displayImages ? displayImages.map(image => (
-                        <div key={`${image.id}`}>
-                            <Dialog>
-                                <DialogTrigger asChild>
-                                    <button>
-                                        <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3 shadow-md' />
-                                    </button>
-                                </DialogTrigger>
-                                <DialogContent className="max-w-xl">
+                <div className="h-full w-full columns-2 sm:columns-3">
+                    {displayImages ? displayImages.map(image => {
+                        const CopyText = `Design id is ${image.id}`
+                        return (
+                            image ? (
+                                <div key={`${image.id}`}>
+                                    <Dialog>
+                                        <DialogTrigger asChild>
+                                            <button>
+                                                <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3 shadow-md' />
+                                            </button>
+                                        </DialogTrigger>
+                                        <DialogContent className="max-w-xl w-full">
 
-                                    <Card>
-                                        <CardContent>
-                                            <div className='space-y-4'>
-                                                <Image src={image.path} alt='image' height={1000} width={1000} className='rounded-lg mt-3 shadow-md' />
-                                                <p className='font-semibold text-lg'>Design id = <span className="font-bold text-3xl">{image.id}</span></p>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
+                                            <Card>
+                                                <CardContent>
+                                                    <div className='space-y-4'>
+                                                        <Image src={image.path} alt='image' height={500} width={500} className='rounded-lg mt-3 shadow-md' />
+                                                        <div className="flex justify-between items-center">
+                                                            <input className='p-2 rounded-md px-4 focus:outline-none' type="text" value={CopyText} readOnly />
+                                                            <Button onClick={() => handleCopyClick(CopyText)}>Copy</Button>
+                                                        </div>
+                                                    </div>
+                                                </CardContent>
+                                            </Card>
 
-                                    <DialogFooter>
-                                        <Button type="submit">Add Favorite</Button>
-                                    </DialogFooter>
-                                </DialogContent>
-                            </Dialog>
-                        </div>
-                    ))
-                        : <div>Loading</div>}
+                                            <DialogFooter>
+                                                <Button type="submit">Add Favorite</Button>
+                                            </DialogFooter>
+                                        </DialogContent>
+                                    </Dialog>
+                                </div>
+                            ) : (
+                                <div className="h-full w-full">
+                                    <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                                </div>
+                            )
+                        )
+                    })
+                        : <div className='h-full w-full flex justify-between items-center flex-wrap mx-auto space-y-4'>
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                            <Skeleton className='w-[500px] h-[400px] rounded-md' />
+                        </div>}
                 </div>
 
 
