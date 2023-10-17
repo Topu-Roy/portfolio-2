@@ -208,7 +208,7 @@ const Footer = () => {
                         </span>
                         <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                             <a
-                                href="#"
+                                href="https://www.facebook.com/topuroy.143/"
                                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
                             >
                                 <svg
@@ -224,7 +224,7 @@ const Footer = () => {
                                         clipRule="evenodd"
                                     />
                                 </svg>
-                                <span className="sr-only">Facebook page</span>
+                                <span className="sr-only">Facebook account</span>
                             </a>
                             <a
                                 href="#"
@@ -261,7 +261,7 @@ const Footer = () => {
                                 <span className="sr-only">Twitter page</span>
                             </a>
                             <a
-                                href="#"
+                                href="https://github.com/Topu-Roy"
                                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
                             >
                                 <svg
